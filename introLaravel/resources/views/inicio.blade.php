@@ -9,19 +9,23 @@
     
     <style>
         body, html {
-            height: 100%; /* Asegura que el body tenga una altura de 100% */
+            height: 100%; 
         }
         .full-height {
-            height: 100vh; /* Altura completa de la ventana */
-        }
+            height: 100vh; 
     </style>
 </head>
 <body>
 
     <div class="d-flex flex-column justify-content-center align-items-center text-center full-height">
-        <h1 class="display-1">Bienvenido querido Turista!</h1>/
+
+        <h1 class="display-1"> Bienvenido Turista! </h1>
         <p>Presiona el botón para iniciar....</p>
-        <button class="btn btn-primary">Comencemos!!</button>
+        
+        
+       <a href="/form" class="btn btn-danger"> Ir al Registro </a>
+       <a href="{{ route('rutaform') }}" class="btn btn-primary"> Ir al Registro </a> 
+
     </div>
     
    
