@@ -5,7 +5,27 @@
 
       {{-- inicia Tarjeta con formulario --}}
 
+        {{-- @dump($id) --}}
+
       <div class="container mt-5 col-md-6">
+
+        @if(session('exito'))
+        <x-Alert tipo="success"> {{ session('exito') }} </x-Alert>  
+        @endif
+
+{{--         @session('exito')
+        <x-Alert tipo="warning"> {{ $value }} </x-Alert> 
+        @endsession --}}
+
+        @session('exito')
+        <script> 
+            Swal.fire({
+            title: "Respuesta Servidor!",
+            text: '{{ $value }}',
+            icon: "success"});
+          </script>
+        @endsession
+        
      
         <div class="card font-monospace">
 
